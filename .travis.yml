@@ -2,7 +2,9 @@ sudo: false
 language: python
 
 python:
-- 3.5
+  - 3.5
+  - 3.4
+  - 2.7
 
 install:
   # Install conda
@@ -15,9 +17,10 @@ install:
   # Install dependencies
   - conda create -n my-project python=3 pytest
   - source activate my-project
+  - pip install tox
 
 script:
-    pytest
+    tox
 
 # after_success:
 #   - coveralls
