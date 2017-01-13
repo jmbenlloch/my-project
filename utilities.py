@@ -5,4 +5,4 @@ def inc2(n):
     return n + 2
 
 def inc3(n):
-    return n - 3
+    return n + 3
